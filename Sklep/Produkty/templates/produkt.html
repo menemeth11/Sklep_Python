@@ -1,0 +1,14 @@
+{% extends 'szablon.html' %}
+
+{% block produkty %}
+{% if produkt_user %}
+      <h1> {{ produkt_user.nazwa }} </h1>
+      <p>Producent: {{ produkt_user.producent }}</p>
+      <p>Stan: {{ produkt_user.stan }}</p>
+      <p> {{ produkt_user.opis }}</p>
+      <p> {{ produkt_user.cena }}</p>
+
+  {% else %}
+      <p> Nie ma takiego produktu </p>
+  {% endif %}
+{% endblock produkty %}
